@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/css.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='image/logo.png')}}">
+    <script type="text/javascript" herf="{{url_for('static',filename='js/java.js')}}>"></script>
+	<title>product</title>
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	  <img src="{{url_for('static',filename='image/shoptitle.png')}}" width="180" height="80" alt="title" class="center"> 
+      <!---navi bar--->
+<!-- Top navigation -->
+<div class="topnav">
+
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="{{url_for('homepage')}}" >Home</a>
+  </div>
+
+  <!-- Left-aligned links (default) -->
+  <a href="{{url_for('newarrival')}}">New arrival</a>
+  <a href="{{url_for('contact')}}">Contact</a>
+  <a href="{{url_for('product')}}"class="active">Product</a>
+  <a href="{{url_for('about')}}">About</a>
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+  <a href="{{url_for('preorder')}}">preorder</a>
+  </div>
+
+</div>
+</head>
+<body>
+
+		<div class="container-fluid">
+		
+	<h3>Our Products </h3>
+
+	<div class="row">
+		<div class="col-md-3"><img src="{{url_for('static',filename='image/product1.png')}}" height="250" width="225" align="top"><br><br></div>
+		
+		<div class="col-md-3">
+			<table style="color: black ">  
+				<tr>
+			    <th>New arrival</th>
+			    </tr>
+			    <tr>
+			    	<td>Ruby Gem Necklace</td>
+			    </tr>
+			    <tr>
+			    	<td>$10,000</td>
+			    </tr>
+			</table></div>
+		<div class="col-md-3">
+		<p style="color:black">This is our first hand made product designing necklace with ruby gem.<br>
+			Every one of them are unique because of handmade
+		It contains the element of what ladies love.<br>
+		It is full of cutness and elegance. you can order it from pre-order.<button><a href="{{url_for('preorder')}}">preorder</button><br> </p></div>
+		<div class="col-md-3"><img src="{{url_for('static',filename='image/product2.jpge')}}" height="250" width="225" align="top"></div>
+	</div>
+	</div>
+
+</body>
+<footer>@2020Jiaostone</footer>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/css.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='image/logo.png')}}">
+    <script type="text/javascript" herf="{{url_for('static',filename='js/java.js')}}>"></script>
+  <title>Jiaostone Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <header> 
+  <img src="{{url_for('static',filename='image/shoptitle.png')}}" width="180" height="80" alt="title" class="center"> 
+      <!---navi bar--->
+<!-- Top navigation -->
+<div class="topnav">
+
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="{{url_for('homepage')}}" class="active">Home</a>
+  </div>
+
+  <!-- Left-aligned links (default) -->
+  <a href="{{url_for('newarrival')}}">New arrival</a>
+  <a href="{{url_for('contact')}}">Contact</a>
+  <a href="{{url_for('product')}}">Product</a>
+  <a href="{{url_for('about')}}">About</a>
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+  <a href="{{url_for('preorder')}}">preorder</a>
+  </div>
+
+</div>
+
+  </header>
+
+</head>
+
+<body>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="{{url_for('static',filename='image/slide1.png')}}" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="{{url_for('static',filename='image/slide2.png')}}" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="{{url_for('static',filename='image/slide3.png')}}" style="width:100%">
+      </div>
+    </div>
+
+<script type="text/javascript">
+    //Slide image at home page
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000); 
+}
+</script>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="container">
+  <img src="{{url_for('static',filename='image/homepic.png')}}" style="width: 100%S" width="1200" height="600">
+  <div class="piccenter"><h4>Check our product on <br> <br>
+    <form>
+    <button style="color: transparent;border: none; background-color: transparent;" formaction="{{url_for('newarrival')}}" ><img src="{{url_for('static',filename='image/button.png')}}" width="100"></button></form>
+    
+
+  </div>
+    <div class="col-md-3"></div>
+
+  </div>
+  </div>
+
+    </h4>
+  </div>
+</div>
+
+
+</body>
+
+  <footer>@2020Jiaostone</footer>
+
+</html>

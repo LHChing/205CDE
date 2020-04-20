@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/css.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='image/logo.png')}}">
+    <script type="text/javascript" herf="{{url_for('static',filename='js/java.js')}}>"></script>
+  <header> 
+  <img src="{{url_for('static',filename='image/shoptitle.png')}}" width="180" height="80" alt="title" class="center"> 
+      <!---navi bar--->
+<!-- Top navigation -->
+<div class="topnav">
+
+  <!-- Centered link -->
+    <div class="topnav-centered">
+    <a href="{{url_for('homepage')}}" >Home</a>
+  </div>
+
+  <!-- Left-aligned links (default) -->
+  <a href="{{url_for('newarrival')}}">New arrival</a>
+  <a href="{{url_for('contact')}}"class="active">Contact</a>
+  <a href="{{url_for('product')}}">Product</a>
+  <a href="{{url_for('about')}}">About</a>
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+  <a href="{{url_for('preorder')}}">preorder</a>
+  </div>
+
+</div>
+
+  </header>
+</head>
+<body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-8"><img src="{{url_for('static',filename='image/contact.png')}}" width="1250" height="800"> 
+        <div class="piccenter">
+  <p>
+  <h3>Email: jiaostone@gmail.com<br><br>
+  Telephone:97898989<br><br>
+  Working hour:10:00-18:00  <br><br>
+ <form action="{{ url_for('contact') }}" method="post">
+    Comment: <input type="text" id="comment" name="comment"> <button type="submit">Enter</button></form>
+    <br>
+    <br>
+    </h3>
+</p>
+  </div></div>
+        <div class="col-md-2"></div>
+
+      </div>
+    </div>
+</body>
+<footer>@2020Jiaostone</footer>
+
+</html>

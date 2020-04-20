@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/css.css')}}">
+    <script type="text/javascript" herf="{{url_for('static',filename='js/java.js')}}>"></script>
+    <link rel="icon" href="{{url_for('static',filename='image/logo.png')}}">
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+          <title>pre-order</title>
+<header>
+ 	<img src="{{url_for('static',filename='image/shoptitle.png')}}" width="180" height="80" alt="title" class="center">
+ </header>
+</head>
+<body>
+	<br>
+
+	<div class="container-fluid">
+		<div class="row">
+
+		<div class="col-md-3"><img src="{{url_for('static',filename='image/product1.png')}}" height="250" width="225" align="top"><br>
+			<button style="background-color: black; color: white; border: none;"><a href="{{url_for('homepage')}}">back</a></button></div>
+		
+		<div class="col-md-3">
+			<table style="color: black ">  
+				<tr>
+			    <th>New arrival</th>
+			    </tr>
+			    <tr>
+			    	<td>Ruby Gem Necklace</td>
+			    </tr>
+			    <tr>
+			    	<td>$10,000</td>
+			    </tr>
+			</table>
+		</div>
+	<form action="{{ url_for('preorder') }}" method="post">
+		
+			Enter your name:<br><input type="text" id="name" name="name"><br>
+			Enter your phone number:<br><input type="text" id="phone" name="phone"><br>
+			Enter your email:<br><input type="email" id="email" name="email"><br>
+		
+
+
+				<label for="amt">How many do you want to order?</label><br>
+				<select id="amt" name="amt" multiple>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<button type="submit">submit</button>
+			
+	</form>
+	</div>
+	</div>
+</body>
+</html>
